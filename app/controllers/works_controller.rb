@@ -4,7 +4,7 @@ class WorksController < ApplicationController
         def index
           if params[:search] != nil && params[:search] != ''
             search = params[:search]
-            @works = Work.joins(:user).where("title LIKE ? OR question_1 LIKE ? OR question_2 LIKE ? OR question_3 LIKE ? OR question_4 LIKE ? OR question_5 LIKE ? OR answer_1 LIKE ? OR answer_2 LIKE ? OR answer_3 LIKE ? OR answer_4 LIKE ? OR answer_5 LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+            @works = Work.joins(:user).where("title LIKE ? OR question_11 LIKE ? OR question_2 LIKE ? OR question_3 LIKE ? OR question_4 LIKE ? OR question_5 LIKE ? OR answer_1 LIKE ? OR answer_2 LIKE ? OR answer_3 LIKE ? OR answer_4 LIKE ? OR answer_5 LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
           else
             @works = Work.all
           end
@@ -63,7 +63,7 @@ class WorksController < ApplicationController
         
         private
           def work_params
-            params.require(:work).permit(:title, :remarks, :question_1, :answer_1, :question_2, :answer_2, :question_3, :answer_3, :question_4, :answer_4, :question_5, :answer_5, :character_limit_1, :character_limit_2, :character_limit_3, :character_limit_4, :character_limit_5, tag_ids: [])
+            params.require(:work).permit(:title, :remarks, :question_11, :answer_1, :question_2, :answer_2, :question_3, :answer_3, :question_4, :answer_4, :question_5, :answer_5, :character_limit_1, :character_limit_2, :character_limit_3, :character_limit_4, :character_limit_5, tag_ids: [])
           end
         
 end

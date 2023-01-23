@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 2022_12_09_160522) do
     t.text "answer_3"
     t.text "answer_4"
     t.text "answer_5"
-    t.text "question_1"
+    t.text "question_11"
     t.text "question_2"
     t.text "question_3"
     t.text "question_4"

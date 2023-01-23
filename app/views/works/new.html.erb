@@ -28,7 +28,7 @@
 <div class="textfield_question">
     <div class="questionbox">
       <%= f.label :質問1  %>
-      <%= f.text_area :question_1, class: "questionfield" %>
+      <%= f.text_area :question_11, class: "questionfield" %>
     </div>
   <div class="countbox">
     <%= f.label :文字数  %>
@@ -156,7 +156,7 @@
  <div class="textfield_question">
     <div class="questionbox">
       <%= f.label :質問5  %>
-      <%= f.text_area :question_1, class: "questionfield" %>
+      <%= f.text_area :question_5, class: "questionfield" %>
     </div>
   <div class="countbox">
     <%= f.label :文字数  %>
@@ -191,9 +191,9 @@
 
 
 
+
 <% end %>
 
-<%= link_to "トップページへ（後で消す）", works_path %>
 
 <div class="countshiki">
 <form oninput="result.value = Math.round(Number(pri.value) * Number(count_1.value) /10);">

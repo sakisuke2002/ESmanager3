@@ -8,7 +8,7 @@ class CreateWorks < ActiveRecord::Migration[6.1]
       t.text :answer_3
       t.text :answer_4
       t.text :answer_5
-      t.text :question_1
+      t.text :question_11
       t.text :question_2
       t.text :question_3
       t.text :question_4

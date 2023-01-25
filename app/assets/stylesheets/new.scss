@@ -1,19 +1,44 @@
 .textfield_title{
-    background-color: #d6d6d6;
-    width: 70%;
+    background-color: #F7F5F2;
+    width: 55%;
     margin: 0 auto;
     padding: 30px;
     text-align: center;
-
+    position: relative;
+    padding: 0.5em 0.5em;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.textfield_title:before, .textfield_title:after{
+  content: '';
+  position: absolute;
+  top: -10px;
+  width: 2px;
+  height: -webkit-calc(100% + 20px);
+  height: calc(100% + 20px);
+  background-color: black;
+}
+.textfield_title:before {left: 10px;}
+.textfield_title:after {right: 10px;}
+.textfield_title p {
+  margin: 0; 
+  padding: 0;
 }
 
 .textfield_question{
-    background-color: #EAEAEA;
-    width: 70%;
-    margin: 0 auto;
-    padding: 30px;
-    text-align: center;
-    border: 5px solid white;
+  border-top: dashed #000000;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.new_box{
+  margin: 20px;
+}
+
+.new_box_2{
+  margin-top: 50px;
 }
 
 .countbox{
@@ -52,7 +77,39 @@ input[type="title"] {
 .questionbox{
     width: 100%;
     margin: 0px;
+    text-align: center;
 }
+
+.form-group_1{
+  width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+.form-group_2{
+  width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+.form-group_3{
+  width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+.form-group_4{
+  width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
+.form-group_5{
+  width: 100%;
+    margin: 0px;
+    text-align: center;
+}
+
 
 .new_margin{
     width: 100%;
@@ -62,7 +119,8 @@ input[type="title"] {
 
 .new_submit{
     text-align: center;
-    margin: 50px;
+    margin-top: 0px;
+    margin-bottom: 60px;
     
 }
 
@@ -72,20 +130,49 @@ input[type="title"] {
     background-color: burlywood;
   }
 
-.countshiki{
+.countshik{
     text-align: center;
     background-color: #d6d6d6;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
+.countshiki{
+  position: relative;
+  background: #F7F5F2;
+  box-shadow: 0px 0px 0px 5px #F7F5F2;
+  border: dashed 2px #8D8DAA;
+  padding: 0.2em 0.5em;
+  color: #454545;
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.countshiki:after{
+  position: absolute;
+  content: '';
+  right: -7px;
+  top: -7px;
+  border-width: 0 15px 15px 0;
+  border-style: solid;
+  border-color: #F7F5F2 #fff #f7f5f2e3;
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+.countshiki p {
+  margin: 0; 
+  padding: 0;
+}
+
 /*表示するテキストが切り替わる*/
 .submit-btn{
     /*テキストの基点とするためrelativeを指定*/
   position: relative;
+  background-color: F7F5F2;
     /*ボタンの形状*/
   border: 1px solid #555;
-  border-radius:25px;
+  border-radius:50px;
     min-width:210px;
   padding: 20px;
     text-align: center;
@@ -99,7 +186,7 @@ input[type="title"] {
   
   /*hoverした際の変化*/
   .submit-btn:hover{
-  background:rgb(39, 39, 255);
+  background:#F56D91;
   color:#fff;
   }
   
@@ -128,4 +215,11 @@ input[type="title"] {
   
   .submit-btn:hover span:nth-child(2){
   opacity:1;/*不透明に*/
+  }
+
+
+  .new_margin{
+    background: #337079;
+    opacity: 0;
+    height: 30px;
   }

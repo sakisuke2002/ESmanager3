@@ -57,7 +57,7 @@ class WorksController < ApplicationController
         def destroy
             work = Work.find(params[:id])
             work.destroy
-            redirect_to action: :index
+            redirect_to user_path(current_user.id)
         end
         
         

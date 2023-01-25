@@ -13,8 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
-
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
 
   <body>
 
@@ -31,14 +33,15 @@
       <div class="button"><%= button_to "ログイン", new_user_session_path, method: :get %></div>
       <% end %>
     </div>
+  
     </header>
 
     <main>
     <%= yield %>
     </main>
 
-    <footer>
-    <p>Copyright Saki Kadoma All Rights Reserved.</p>
+    <footer class="footer">
+      <p>Copyright Saki Kadoma All Rights Reserved.</p>
     </footer>
 
 </body>

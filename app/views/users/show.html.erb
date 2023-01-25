@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag 'users', :media => "all" %>
 
 
-<h2>ユーザーマイページ</h2>
+<h2>マイページ</h2>
 <div class="userinfo-container">
   <div class="item">
-    名前 : <%= @user.name %></div>
-  <div class="item">
-    メールアドレス : <%= @user.email %></div>
+    ユーザー: <%= @user.name %></div>
+    <br>
+    <br>
   <% if current_user.id == @user.id %>
     <%= button_to "修正", edit_user_registration_path , method: :get %>
   <% end %>
@@ -14,30 +14,32 @@
 
 
 <div class="search-container">
-  <h3>投稿を検索</h3>
-  <div class="search">
-    <%= form_tag({controller:"users",action:"show"}, method: :get) do %>
-      <%= text_field_tag :search %>
-      <%= submit_tag 'ワード検索'  %>
-    <% end %>
-  </div>
-  </br>
-  <div class="search">
-      <div class="tag_list">
+  <div class="index_box">
+    <h5>投稿を検索</h5>
+    <div class="search">
       <%= form_tag({controller:"users",action:"show"}, method: :get) do %>
-        <% Tag.all.each do |t| %>
-            <%= check_box :tag_ids, t.name %><%= t.name %>
-        <% end %>
-        <br><br>
-      <%= submit_tag 'タグ検索' %>
+        <%= text_field_tag :search %>
+        <%= submit_tag 'ワード検索' ,class:"word_button"%>
       <% end %>
-      </div>
+    </div>
+    </br>
+    <div class="search">
+        <div class="tag_list">
+        <%= form_tag({controller:"users",action:"show"}, method: :get) do %>
+          <% Tag.all.each do |t| %>
+              <%= check_box :tag_ids, t.name %><%= t.name %>
+          <% end %>
+          <br><br>
+        <%= submit_tag 'タグ検索' %>
+        <% end %>
+    </div>
+    </div>
   </div>
 </div>
 
 
 <div class="ES-container">
-<h4>ES一覧</h4>
+<h4>MyES一覧</h4>
 <div class="new">
   <%= button_to "新規投稿へ", new_work_path, method: :get  %>
   </div>

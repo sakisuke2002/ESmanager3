@@ -1,16 +1,20 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="login">
+
+<div class="container">
+
+<h7>Edit <%= resource_name.to_s.humanize %></h7>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, placeholder: "ユーザー名", autofocus: true, autocomplete: "name" %>
   </div>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder: "メールアドレス",autofocus: true, autocomplete: "email" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -18,22 +22,21 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.label :password %> <br><i>(leave blank if you don't want to change it)</i><br />
+    <%= f.password_field :password, placeholder: "6文字以上", autocomplete: "new-password" %>
     <% if @minimum_password_length %>
       <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
     <% end %>
   </div>
 
   <div class="field">
     <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.password_field :password_confirmation, placeholder: "新パスワード確認", autocomplete: "new-password" %>
   </div>
 
   <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "current-password" %>
+    <%= f.label :current_password %> <br />
+    <%= f.password_field :current_password, placeholder: "元のパスワードを入力", autocomplete: "current-password" %>
   </div>
 
   <div class="actions">
@@ -41,11 +44,13 @@
   </div>
 <% end %>
 
-<%= link_to "マイページへ", user_path(current_user.id) %>
+
+<br>
+<h8>Cancel my account</h8>
+<br><br>
+Really?
+<%= button_to "アカウント削除", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %>
 
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+</div>
+</div>
